@@ -37,9 +37,9 @@ async def on_message(message):
         channeladmin = client.get_channel(CHANNEL_ADMIN_ID)
         radiomsg = obscure(message.content)
         radiomsg2 = cricri(radiomsg)
+        await message.channel.purge(limit=1)
         await channel.send(radiomsg2)
         await channeladmin.send(message.author)
-        await message.channel.purge(limit=1)
     if str(message.channel) == "channel-where-the-message-is-sent" and str(message.author.id) == "BOT-ID":
         channel = client.get_channel(CHANNEL_ID)
         await channel.send(message.id)
