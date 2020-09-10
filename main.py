@@ -1,10 +1,9 @@
 import os
 import random
-from cogs import radio
 import discord
 from discord.ext import commands
-from urllib import parse, request
-import re
+
+
 
 
 def obscure(message):
